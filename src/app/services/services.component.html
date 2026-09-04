@@ -1,0 +1,31 @@
+<section class="services-page">
+  <!-- Encabezado introductorio del catálogo de servicios. -->
+  <header class="services-header">
+    <p class="eyebrow">Soluciones digitales</p>
+    <h1>Servicios que impulsan tu negocio</h1>
+    <p class="intro">
+      Diseñamos estrategias y soluciones digitales para ayudar a las empresas a crecer,
+      destacarse y conectar mejor con su audiencia.
+    </p>
+  </header>
+
+  <!-- *ngFor crea una tarjeta por cada objeto del arreglo services. -->
+  <div class="services-grid">
+    <article class="service-card" *ngFor="let service of services">
+      <div class="service-icon" [style.background]="service.accent">{{ service.icon }}</div>
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.description }}</p>
+      <a routerLink="/contact" class="service-link">Solicitar información</a>
+    </article>
+  </div>
+
+  <!-- CTA final para solicitar una cotización o conocer la empresa. -->
+  <div class="cta-panel">
+    <h2>¿Necesitas una estrategia digital sólida?</h2>
+    <p>Te ayudamos a transformar ideas en experiencias digitales efectivas y escalables.</p>
+    <div class="cta-actions">
+      <a routerLink="/contact" class="btn btn-primary">Solicitar cotización</a>
+      <a routerLink="/about" class="btn btn-secondary">Conocer más</a>
+    </div>
+  </div>
+</section>

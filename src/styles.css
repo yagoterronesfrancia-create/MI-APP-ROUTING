@@ -1,0 +1,42 @@
+/* Variables compartidas para mantener la identidad visual de toda la aplicación. */
+:root {
+  --primary: #0d6efd;
+  --primary-dark: #0a4fb4;
+  --primary-soft: #eaf4ff;
+  --dark: #0f172a;
+  --text: #1e293b;
+  --muted: #64748b;
+  --bg: #f4f7fb;
+  --white: #ffffff;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* El modelo border-box facilita calcular tamaños y espaciados. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fondo y tipografía base que heredan las páginas. */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #edf5ff 0%, #f7f9fc 100%);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(13, 110, 253, 0.2);
+}
