@@ -15,7 +15,7 @@
       <div class="service-icon" [style.background]="service.accent">{{ service.icon }}</div>
       <h2>{{ service.title }}</h2>
       <p>{{ service.description }}</p>
-      <a routerLink="/contact" class="service-link">Solicitar información</a>
+      <a [routerLink]="['/services', service.slug]" class="service-link">Ver detalle</a>
     </article>
   </div>
 
@@ -24,7 +24,7 @@
     <h2>¿Necesitas una estrategia digital sólida?</h2>
     <p>Te ayudamos a transformar ideas en experiencias digitales efectivas y escalables.</p>
     <div class="cta-actions">
-      <a routerLink="/contact" class="btn btn-primary">Solicitar cotización</a>
+      <a routerLink="/quotation" class="btn btn-primary">Solicitar cotización</a>
       <a routerLink="/about" class="btn btn-secondary">Conocer más</a>
     </div>
   </div>

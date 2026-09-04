@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { QuotationComponent } from './quotation/quotation.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ServiceDetailComponent } from './service-detail/service-detail.component';
 
 /** Mapa de navegación que relaciona cada URL con su componente. */
 export const routes: Routes = [
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'services/:slug', component: ServiceDetailComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'quotation', component: QuotationComponent },
   { path: 'login', component: LoginComponent },

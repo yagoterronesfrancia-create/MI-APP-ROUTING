@@ -13,6 +13,8 @@ Aplicación web de una empresa de servicios digitales, desarrollada con Angular 
 	- Hosting y Dominio
 	- Estrategia Digital
 	- Identidad Corporativa
+- Página reutilizable de detalle para cada servicio, con rutas dinámicas como `/services/web-apps`.
+- Animaciones de entrada, efectos hover y llamadas a la acción en las tarjetas y detalles.
 - Página «Acerca de» con información de la empresa y fotografías del equipo.
 - Página «Contacto» con datos de contacto y formulario funcional.
 - Página «Cotización» con formulario para solicitar una propuesta de proyecto.
@@ -30,6 +32,13 @@ La aplicación utiliza componentes standalone de Angular. El archivo `src/app/ap
 | --- | --- |
 | `/home` | Inicio |
 | `/services` | Servicios |
+| `/services/web-apps` | Detalle de Diseño Web Apps |
+| `/services/redes-sociales` | Detalle de Redes Sociales |
+| `/services/marketing-digital` | Detalle de Marketing Digital |
+| `/services/software` | Detalle de Desarrollo Software |
+| `/services/hosting-dominio` | Detalle de Hosting y Dominio |
+| `/services/estrategia-digital` | Detalle de Estrategia Digital |
+| `/services/identidad-corporativa` | Detalle de Identidad Corporativa |
 | `/about` | Acerca de |
 | `/contact` | Contacto |
 | `/quotation` | Solicitar cotización |
@@ -39,6 +48,8 @@ La aplicación utiliza componentes standalone de Angular. El archivo `src/app/ap
 Al abrir la ruta raíz (`/`), Angular redirige automáticamente a `/home`. Las rutas desconocidas también vuelven a la página de inicio.
 
 La navegación se realiza con `routerLink`, por lo que la aplicación funciona como una SPA: cambia el contenido sin recargar completamente el navegador. `router-outlet` es el espacio donde se muestra cada página.
+
+El componente `ServiceDetailComponent` lee el parámetro `:slug` de la URL y busca el servicio correspondiente en `services.data.ts`. De esta forma, una sola plantilla reutilizable genera el detalle de los siete servicios.
 
 ## Formulario de contacto
 
