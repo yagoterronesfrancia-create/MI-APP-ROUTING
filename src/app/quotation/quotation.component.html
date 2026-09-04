@@ -1,0 +1,80 @@
+<section class="quotation-page">
+  <header class="page-header">
+    <p class="eyebrow">Hagamos realidad tu proyecto</p>
+    <h1>Solicita una cotización</h1>
+    <p class="subtitle">Cuéntanos qué necesitas y prepararemos una propuesta inicial para tu negocio.</p>
+  </header>
+
+  <div class="quotation-layout">
+    <aside class="quotation-intro">
+      <span class="intro-mark">✦</span>
+      <h2>Una idea clara empieza con una buena conversación.</h2>
+      <p>Completa el formulario y nuestro equipo revisará los objetivos, tiempos y alcance de tu proyecto.</p>
+      <ul>
+        <li>Respuesta inicial en menos de 24 horas</li>
+        <li>Propuesta adaptada a tus objetivos</li>
+        <li>Sin compromiso</li>
+      </ul>
+    </aside>
+
+    <section class="quotation-card">
+      <form (ngSubmit)="submitQuotation()" #quotationForm="ngForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quotation-name">Nombre *</label>
+            <input id="quotation-name" name="name" type="text" [(ngModel)]="quotation.name" required>
+          </div>
+          <div class="form-group">
+            <label for="quotation-email">Email *</label>
+            <input id="quotation-email" name="email" type="email" [(ngModel)]="quotation.email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quotation-service">Servicio *</label>
+            <select id="quotation-service" name="service" [(ngModel)]="quotation.service" required>
+              <option value="" disabled>Selecciona un servicio</option>
+              <option *ngFor="let service of services" [value]="service">{{ service }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quotation-budget">Presupuesto estimado</label>
+            <select id="quotation-budget" name="budget" [(ngModel)]="quotation.budget">
+              <option value="">Selecciona un rango</option>
+              <option value="500 - 1,000 USD">500 - 1,000 USD</option>
+              <option value="1,000 - 3,000 USD">1,000 - 3,000 USD</option>
+              <option value="3,000 - 5,000 USD">3,000 - 5,000 USD</option>
+              <option value="Más de 5,000 USD">Más de 5,000 USD</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="quotation-timeline">¿Cuándo quieres comenzar?</label>
+          <select id="quotation-timeline" name="timeline" [(ngModel)]="quotation.timeline">
+            <option value="">Selecciona una opción</option>
+            <option value="Lo antes posible">Lo antes posible</option>
+            <option value="En 1 mes">En 1 mes</option>
+            <option value="En 2 o 3 meses">En 2 o 3 meses</option>
+            <option value="Solo estoy explorando">Solo estoy explorando</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="quotation-details">Cuéntanos sobre tu proyecto *</label>
+          <textarea id="quotation-details" name="details" rows="5" [(ngModel)]="quotation.details" required></textarea>
+        </div>
+
+        <button class="submit-button" type="submit" [disabled]="!quotationForm.form.valid">Solicitar cotización</button>
+      </form>
+
+      <div *ngIf="submitted" class="success-message">
+        <strong>Solicitud recibida.</strong>
+        <span>Revisaremos tu proyecto y te contactaremos pronto.</span>
+      </div>
+    </section>
+  </div>
+
+  <a routerLink="/home" class="back-link">← Volver al inicio</a>
+</section>

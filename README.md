@@ -15,6 +15,8 @@ Aplicación web de una empresa de servicios digitales, desarrollada con Angular 
 	- Identidad Corporativa
 - Página «Acerca de» con información de la empresa y fotografías del equipo.
 - Página «Contacto» con datos de contacto y formulario funcional.
+- Página «Cotización» con formulario para solicitar una propuesta de proyecto.
+- Páginas de «Iniciar sesión» y «Registro» con validación visual de campos.
 - Barra de navegación compartida con enlaces activos según la ruta actual.
 - Estilos separados de las plantillas HTML en cada componente.
 - Diseño responsive para escritorio, tablet y móvil.
@@ -30,6 +32,9 @@ La aplicación utiliza componentes standalone de Angular. El archivo `src/app/ap
 | `/services` | Servicios |
 | `/about` | Acerca de |
 | `/contact` | Contacto |
+| `/quotation` | Solicitar cotización |
+| `/login` | Iniciar sesión |
+| `/register` | Crear cuenta |
 
 Al abrir la ruta raíz (`/`), Angular redirige automáticamente a `/home`. Las rutas desconocidas también vuelven a la página de inicio.
 
@@ -45,6 +50,8 @@ El formulario está implementado en `ContactComponent` usando `FormsModule` y en
 4. Después de tres segundos, el formulario se limpia y vuelve a su estado inicial.
 
 Actualmente el formulario es demostrativo y no envía datos a un servidor o servicio de email.
+
+Los formularios de cotización, login y registro también funcionan actualmente como demostraciones de frontend. Muestran sus estados de éxito y validan campos básicos, pero todavía no tienen conexión con una API, una base de datos ni un sistema real de autenticación.
 
 ## Estructura principal
 
