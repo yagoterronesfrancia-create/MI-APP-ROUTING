@@ -1,9 +1,11 @@
+/* Contenedor de la página de solicitud de cotización. */
 .quotation-page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem 0 2rem;
 }
 
+/* Encabezado centrado de la sección. */
 .page-header {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -31,6 +33,7 @@
   line-height: 1.7;
 }
 
+/* Separa la información comercial del formulario. */
 .quotation-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.4fr;
@@ -38,6 +41,7 @@
   align-items: start;
 }
 
+/* Estilo base compartido por el panel informativo y la tarjeta del formulario. */
 .quotation-intro,
 .quotation-card {
   border-radius: 22px;
@@ -76,12 +80,14 @@
   border: 1px solid #e2e8f0;
 }
 
+/* Agrupa dos campos en una fila en escritorio. */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
+/* Espaciado y presentación de cada campo. */
 .form-group {
   margin-bottom: 1.2rem;
 }
@@ -119,6 +125,7 @@
   box-shadow: 0 0 0 4px rgba(22, 74, 154, 0.12);
 }
 
+/* Acción principal del formulario. */
 .submit-button {
   width: 100%;
   padding: 0.95rem 1.2rem;
@@ -136,6 +143,7 @@
   cursor: not-allowed;
 }
 
+/* Confirmación de solicitud enviada. */
 .success-message {
   display: grid;
   gap: 0.3rem;
@@ -155,6 +163,7 @@
   font-weight: 700;
 }
 
+/* En móvil, todas las columnas se apilan verticalmente. */
 @media (max-width: 768px) {
   .quotation-layout,
   .form-row {

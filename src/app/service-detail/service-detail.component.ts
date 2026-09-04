@@ -15,6 +15,7 @@ export class ServiceDetailComponent {
   /** Servicio seleccionado desde el catálogo compartido. */
   service: ServiceItem | undefined;
 
+  /** Busca el servicio cuyo slug coincide con el parámetro de la URL. */
   constructor(route: ActivatedRoute) {
     const slug = route.snapshot.paramMap.get('slug');
     this.service = SERVICES.find(item => item.slug === slug);

@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  /** Datos enlazados a los campos del formulario de registro. */
   account = {
     name: '',
     email: '',
@@ -19,6 +20,7 @@ export class RegisterComponent {
     confirmPassword: ''
   };
 
+  /** Controla el mensaje de registro correcto. */
   registered = false;
 
   /** Confirma el registro si las contraseñas coinciden. */

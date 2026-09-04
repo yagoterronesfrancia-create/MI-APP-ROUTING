@@ -7,6 +7,7 @@ describe('QuotationComponent', () => {
   let component: QuotationComponent;
   let fixture: ComponentFixture<QuotationComponent>;
 
+  // Configura el formulario standalone y el router usado por sus enlaces.
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [QuotationComponent],
@@ -18,6 +19,7 @@ describe('QuotationComponent', () => {
     fixture.detectChanges();
   });
 
+  // Verifica que la página de cotización se puede crear.
   it('should create', () => {
     expect(component).toBeTruthy();
   });

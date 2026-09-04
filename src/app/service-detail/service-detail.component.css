@@ -1,3 +1,4 @@
+/* Contenedor de todas las páginas de detalle. */
 .detail-page {
   max-width: 1050px;
   margin: 0 auto;
@@ -5,6 +6,7 @@
   animation: detail-enter 0.5s ease both;
 }
 
+/* Animación de entrada al navegar a un servicio. */
 @keyframes detail-enter {
   from {
     opacity: 0;
@@ -23,6 +25,7 @@
   font-weight: 700;
 }
 
+/* Cabecera dinámica con el nombre, icono y descripción del servicio. */
 .detail-hero {
   padding: 3rem 2rem;
   border-radius: 24px;
@@ -63,6 +66,7 @@
   line-height: 1.7;
 }
 
+/* Divide las características y la llamada a la acción. */
 .detail-content {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -70,6 +74,7 @@
   margin-top: 1.5rem;
 }
 
+/* Tarjetas visuales del contenido y CTA. */
 .detail-copy,
 .detail-cta {
   padding: 2rem;
@@ -90,6 +95,7 @@
   line-height: 1.8;
 }
 
+/* Lista de capacidades incluidas en el servicio. */
 .detail-copy ul {
   display: grid;
   gap: 0.8rem;
@@ -106,6 +112,7 @@
   font-weight: 700;
 }
 
+/* Panel que dirige a la solicitud de cotización. */
 .detail-cta {
   background: linear-gradient(145deg, #f9fbff, #edf4ff);
 }
@@ -135,6 +142,7 @@
   box-shadow: 0 10px 20px rgba(197, 141, 23, 0.25);
 }
 
+/* Estado mostrado cuando no existe el slug solicitado. */
 .not-found {
   max-width: 700px;
   margin: 3rem auto;
@@ -144,6 +152,7 @@
   text-align: center;
 }
 
+/* En móvil, el detalle pasa a una sola columna. */
 @media (max-width: 768px) {
   .detail-hero,
   .detail-copy,

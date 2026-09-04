@@ -12,11 +12,13 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  /** Datos que el usuario introduce en el formulario de acceso. */
   credentials = {
     email: '',
     password: ''
   };
 
+  /** Indica si se debe mostrar el acceso de demostración completado. */
   loggedIn = false;
 
   /** Muestra el estado de acceso de demostración. */

@@ -1,6 +1,8 @@
 <section *ngIf="service as selectedService; else serviceNotFound" class="detail-page">
+  <!-- Regreso al listado general de servicios. -->
   <a routerLink="/services" class="back-link">← Volver a servicios</a>
 
+  <!-- Cabecera dinámica: sus datos vienen del slug de la URL. -->
   <header class="detail-hero">
     <div class="detail-icon" [style.background]="selectedService.accent">{{ selectedService.icon }}</div>
     <p class="eyebrow">Servicio especializado</p>
@@ -8,10 +10,12 @@
     <p>{{ selectedService.detail }}</p>
   </header>
 
+  <!-- Contenido y llamada a la acción del servicio seleccionado. -->
   <div class="detail-content">
     <section class="detail-copy">
       <h2>¿Qué incluye?</h2>
       <p>{{ selectedService.description }}</p>
+      <!-- Las capacidades se generan dinámicamente con *ngFor. -->
       <ul>
         <li *ngFor="let feature of selectedService.features">{{ feature }}</li>
       </ul>
@@ -25,6 +29,7 @@
   </div>
 </section>
 
+<!-- Estado alternativo cuando el slug no existe en el catálogo. -->
 <ng-template #serviceNotFound>
   <section class="not-found">
     <p class="eyebrow">Servicio no encontrado</p>

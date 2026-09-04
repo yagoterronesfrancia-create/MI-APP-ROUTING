@@ -18,6 +18,7 @@ export interface ServiceItem {
 
 /** Catálogo único reutilizado por la lista y el detalle de cada servicio. */
 export const SERVICES: ServiceItem[] = [
+  // Cada objeto alimenta tanto la tarjeta del listado como su página de detalle.
   {
     slug: 'web-apps',
     icon: '💻',

@@ -22,6 +22,7 @@ export class QuotationComponent {
     details: ''
   };
 
+  /** Controla la confirmación que aparece después de enviar la solicitud. */
   submitted = false;
 
   /** Servicios disponibles para seleccionar en la cotización. */

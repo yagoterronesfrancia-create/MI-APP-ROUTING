@@ -1,4 +1,5 @@
 <section class="auth-page">
+  <!-- Mensaje introductorio del área de clientes. -->
   <div class="auth-brand">
     <span class="brand-mark">M</span>
     <p class="eyebrow">Área de clientes</p>
@@ -6,10 +7,12 @@
     <p>Accede para consultar tus proyectos y mantener tus solicitudes organizadas.</p>
   </div>
 
+  <!-- Tarjeta con el formulario de acceso. -->
   <div class="auth-card">
     <h2>Iniciar sesión</h2>
     <p class="auth-muted">Ingresa tus datos para continuar.</p>
 
+    <!-- ngModel sincroniza cada campo con credentials en el componente. -->
     <form (ngSubmit)="login()" #loginForm="ngForm">
       <div class="form-group">
         <label for="login-email">Email</label>
@@ -19,9 +22,11 @@
         <label for="login-password">Contraseña</label>
         <input id="login-password" name="password" type="password" [(ngModel)]="credentials.password" required minlength="6">
       </div>
+      <!-- Solo permite enviar cuando email y contraseña son válidos. -->
       <button class="auth-button" type="submit" [disabled]="!loginForm.form.valid">Entrar</button>
     </form>
 
+    <!-- Estado de demostración mostrado después del acceso. -->
     <p *ngIf="loggedIn" class="auth-success">Acceso de demostración realizado correctamente.</p>
     <p class="auth-switch">¿No tienes una cuenta? <a routerLink="/register">Crear cuenta</a></p>
   </div>

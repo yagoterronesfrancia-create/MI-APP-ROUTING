@@ -7,6 +7,7 @@ describe('ServiceDetailComponent', () => {
   let component: ServiceDetailComponent;
   let fixture: ComponentFixture<ServiceDetailComponent>;
 
+  // Simula el parámetro web-apps que normalmente entrega el router.
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ServiceDetailComponent],
@@ -24,6 +25,7 @@ describe('ServiceDetailComponent', () => {
     fixture.detectChanges();
   });
 
+  // Comprueba que el slug selecciona el servicio correcto del catálogo.
   it('should create a detail for the selected service', () => {
     expect(component).toBeTruthy();
     expect(component.service?.slug).toBe('web-apps');
